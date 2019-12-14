@@ -1,0 +1,116 @@
+@charset "utf-8";
+@font-face {
+    font-family: sans-normal;
+    src: url(../fonts/sans/MobileFonts/IRANSansMobile.ttf);
+}
+@font-face {
+    font-family: sans-bold;
+    src: url(../fonts/sans/MobileFonts/IRANSansMobile_Bold.ttf);
+}
+@font-face {
+    font-family: sans-light;
+    src: url(../fonts/sans/MobileFonts/IRANSansMobile_Light.ttf);
+}
+@font-face {
+    font-family: sans-ultra-light;
+    src: url(../fonts/sans/MobileFonts/IRANSansMobile_UltraLight.ttf);
+}
+@font-face {
+    font-family: sans-medium;
+    src: url(../fonts/sans/MobileFonts/IRANSansMobile_Medium.ttf);
+}
+* {
+    color: #484848;
+    transition: all .2s ease-out;
+    font-family: sans-light;
+    font-size: 11pt
+}
+body {
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track-piece  {
+    background-color: rgba(0,0,0,0);
+}
+::-webkit-scrollbar-thumb:vertical {
+    height: 10px;
+    background-color: #537a9a;
+}
+html, body {
+    height: 100%;
+}
+ul {
+    list-style: none;
+}
+a:visited, a:focus, a:hover, a:active {
+    text-decoration: none;
+}
+input:focus {
+    outline: none;
+}
+
+/*     ==================     Vue Sax Customized      =================     */
+.vuesax-app-is-rtl .vs-input--placeholder {
+    padding-top: .7rem;
+}
+
+
+/*     ==================     navigation | component      =================     */
+nav {
+    max-height: 80px;
+    overflow: hidden;
+    padding-top: 1rem;
+}
+@media (max-width: 767.98px) {
+    nav {
+        max-height: 135px;
+    }
+}
+nav > .d-flex > div {
+    height: 50px;
+    padding: 0;
+}
+#logo > img{
+    height: 50px;
+    position: relative;
+    top: -14px;
+}
+#drop-list-admin {
+    cursor: pointer;
+}
+#drop-list-admin:hover *{
+    color: #456580;
+}
+#drop-list-admin > * {
+    display: inline-block;
+}
+#drop-list-admin > img {
+    width: 35px;
+    height: 35px;
+    border-radius: 10rem;
+}
+#drop-list-admin > p > span{
+    font-size: 10pt;
+}
+#drop-list-admin i {
+    font-size: 10pt;
+    position: relative;
+    top: 2px;
+}
+
+
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { }
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { }
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { }
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { }
