@@ -8,11 +8,23 @@ export default new Router({
     routes: [{
       path: '/',
       component: () => import('./views/dashboard.vue'),
-      /*children: [{
+      children: [{
         path: '',
-        name: 'profile',
-        component: () => import('./views/profile.vue'),
-      }]*/
+        name: 'home',
+        component: () => import('./views/home/home.vue'),
+      }, {
+        path: '/department/employee',
+        name: 'employee',
+        component: () => import('./views/department/employee.vue')
+      }, {
+        path: '/customers',
+        name: 'customers',
+        component: () => import('./views/customers/customers.vue')
+      }, {
+        path: '/customers/order',
+        name: 'order',
+        component: () => import('./views/customers/order.vue')
+      }]
     }],
 
 });

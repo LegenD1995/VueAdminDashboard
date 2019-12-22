@@ -22,11 +22,11 @@ Vue.use(Vuesax, {
   rtl: true,
   theme:{
     colors:{
-      primary:'#537a9a',
-      success:'#53998a',
+      primary:'#287fc7',
+      success:'#2bdbd2',
       danger:'rgb(242, 19, 93)',
-      warning:'#f5c16e',
-      dark:'#456580'
+      warning:'#ff9a12',
+      dark:'#2d36e0',
     }
   }
 });
@@ -55,7 +55,7 @@ new Vue({
 /*
 * Palette Colors:
 * ---------------- Default colors ---------------
-* Primary: #537a9a
+* Primary: #488eff
 * Secondary: #dae7f2
 * accent: #60b3a1
 * orange: #f5c16e

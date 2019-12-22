@@ -13,54 +13,35 @@ export const website = {
   subMenuRouteIndex: 4, // this parameter saves last route for find out which one of menu must be activated and shown to user.
   route: '',
   logo: {
-    address: '/cms/img/theme/logo.png',
+    address: '/cms/img/layout/logo.png',
     format: 'img' // or svg
   },
+  menuMethod: 1,
   mainMenu: [
-    { name: 'department', component: 'employee', path: '/department/employee', auth: false, icon: 'fal fa-building' },
-    { name: 'users', component: 'unknown', path: '/department/list', auth: false, icon: 'fal fa-head-side' },
-    { name: 'goods', component: 'unknown2', path: '/department/production', auth: false, icon: 'fal fa-store' }
+    { menu: 'department', title: 'دپارتمان و کارمندان', flag: '/department/employee', auth: false, icon: 'department.png' },
+    { menu: 'customers', title: 'امور مشتریان', flag: '/department/list', auth: false, icon: 'users.png' },
+    { menu: 'goods', title: 'امور فروشگاهی', flag: '/department/production', auth: false, icon: 'goods.png' }
   ],
   subMenu: {
-    department: [
-      { title: 'سازمان', auth: false, menus: [
-        { route: 'department', name: 'employee', path: '/', text: 'کارکنان', badge: false, icon: 'fal fa-users' },
-        { route: 'department', name: 'add-employee', path: 'add-employee', text: 'افزودن کارکنان', badge: false, icon: 'fal fa-users-medical', }
-      ]}
-    ],
-    users: [
-      { title: 'مشتریان', auth: false, menus: [
-        { route: 'users', name: 'list', path: '/users/list', text: 'مشتریان', badge: false, icon: 'fal fa-users',
-          attr: [{ name: 'customers', icon: 'far fa-user-friends' }]
-        },
-        { route: 'users', name: 'orders', path: '/users/orders', text: 'درخواست خرید', badge: '999+', icon: 'fal fa-shopping-basket',
-          attr: [{ name: 'orders', icon: 'far fa-user-friends' }, { name: 'orderTime', icon: 'far fa-calendar-alt' }]
-        }
-      ]
-    },
-      { title: 'پشتیبانی', auth: false, menus: [
-        { route: 'users', name: 'support', path: '/users/support', text: 'تیکت ها', badge: '55', icon: 'fal fa-user-headset',
-          attr: [{ name: 'customerTicket', icon: 'far fa-filter' }]
-        }
-      ]}
-    ],
-    goods: [
-      { title: 'محصولات', auth: false, menus: [
-        { route: 'goods', name: 'add', path: '/goods/add', text: 'افزودن به محصولات', badge: false, icon: 'fal fa-ramp-loading',
-          attr: [{ name: 'uploader', icon: 'far fa-filter' }]
-        },
-        { route: 'goods', name: 'list', path: '/goods/list', text: 'لیست محصولات', badge: '19', icon: 'fal fa-warehouse-alt' },
-        { route: 'goods', name: 'category', path: '/goods/category', text: 'دسته بندی ها', badge: '55', icon: 'fal fa-boxes'},
-        { route: 'goods', name: 'media', path: '/goods/media', text: 'محتوای دیجیتال', badge: '69', icon: 'fal fa-database' }
-      ]}
-    ]
-  },
-  activeAttr: [], // this get attr name show icons in navigation bars
-  attrs: {
-    admins: false,
-    /* put your attr name component here, default value must be false */
-  }
-}
+    department:
+      { title: 'دپارتمان و کارمندان', auth: false, icon: 'department.png', menus: [
+        { route: 'department', name: 'employee', flag: '/department/employee', title: 'مدیریت منابع انسانی', badge: false}]
+      },
+    customers:
+      { title: 'امور مشتریان', auth: false, icon: 'users.png', menus: [
+        { route: 'customers', name: 'customers', flag: '/customers', title: 'نمایش مشتریان', badge: false},
+        { route: 'customers', name: 'order', flag: '/customers/order', title: 'درخواست خرید', badge: '999+'},
+        /*{ route: 'users', name: 'support', flag: '/users/support', title: 'تیکت ها', badge: '55'*/]
+      },
+    goods:
+      { title: 'امور فروشگاهی', auth: false, icon: 'goods.png', menus: [
+        { route: 'goods', name: 'add', flag: '/goods/add', title: 'افزودن به محصولات', badge: false},
+        { route: 'goods', name: 'list', flag: '/goods/list', title: 'لیست محصولات', badge: '19'},
+        { route: 'goods', name: 'category', flag: '/goods/category', title: 'دسته بندی ها', badge: '55'},
+        { route: 'goods', name: 'media', flag: '/goods/media', title: 'محتوای دیجیتال', badge: '69'}]
+      },
+    }
+};
 
 /*
  |---------------------------------------------------------------------------------------------------------------------
@@ -76,7 +57,7 @@ export const directoryFile = {
     // it means, you should follow this format: [img-name of classes-address which add to baseUrl]
     img: new RegExp(/\[img-[a-zA-Z ]+\-[1234567890a-zA-Z./]+\]/g)
   }
-}
+};
 
 /*
  |---------------------------------------------------------------------------------------------------------------------
@@ -92,8 +73,10 @@ export const user = {
     user: 'legend',
     name: 'میلاد',
     family: 'محمدی',
+    idCard: '0810163470',
+    cellPhone: '09361719209',
     avatar: '/cms/img/theme/me.png', // true src in production mode: website.baseUrl + 'path'
-    grid: 'مدیریت وب سایت',
+    grid: 'Owner website',
   },
   setting: {
     usedMenu: '', // will upgrade in next versions
@@ -101,5 +84,5 @@ export const user = {
     twoAuthAcc: false,
     online: false,
   }, // it can get information from cookie
-}
+};
 

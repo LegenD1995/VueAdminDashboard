@@ -25,9 +25,6 @@
     font-family: sans-light;
     font-size: 11pt
 }
-body {
-    overflow: hidden;
-}
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -37,7 +34,7 @@ body {
 }
 ::-webkit-scrollbar-thumb:vertical {
     height: 10px;
-    background-color: #537a9a;
+    background-color: #287fc7;
 }
 html, body {
     height: 100%;
@@ -51,29 +48,172 @@ a:visited, a:focus, a:hover, a:active {
 input:focus {
     outline: none;
 }
-
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: sans-normal;
+}
+.h1 {
+    font-size: 19pt;
+}
+.h2 {
+    font-size: 18pt;
+}
+.h3 {
+    font-size: 17pt;
+}
+.h4 {
+    font-size: 15pt;
+}
+.h5 {
+    font-size: 14pt;
+}
+.h6 {
+    font-size: 12pt;
+}
+.p-big, .p-normal {
+    font-family: sans-light;
+}
+.p-big {
+    font-size: 12pt;
+}
+.p-normal {
+    font-size: 10pt;
+}
+.p-small {
+    font-family: sans-ultra-light;
+    font-size: 8.5pt;
+}
+.active-link {
+    font-family: sans-bold !important;
+}
+.td-icon {
+    width: .6rem !important;
+    text-align: center;
+}
+.td-icon > span {
+    text-align: center;
+}
+.en-td, .en-td > *, .en-lang  {
+    font-family: sans-serif !important;
+    font-size: 10pt;
+}
+.fa-td > span {
+    position: relative;
+    top: 2px;
+}
+.gray-scale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.card-route {
+    min-height: 500px;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 4rem;
+}
+.body-routes {
+    background-color: whitesmoke;
+}
+.my-header-card {
+    height: 4rem;
+}
+.my-card {
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+}
+.btn-dark-border {
+    color: #484848 !important;
+}
+.avatar-in-tbl {
+    width: 45px;
+    height: 45px;
+    border-radius: 40rem;
+}
+.btn-icon {
+    font-size: 18pt;
+}
 /*     ==================     Vue Sax Customized      =================     */
 .vuesax-app-is-rtl .vs-input--placeholder {
     padding-top: .7rem;
 }
+.vs-button {
+    padding: .7rem 1.1rem .5rem !important;
+}
+.vs-button-text {
+    font-family: sans-normal  !important;
+}
+.vs-icon {
+ top: -3px;
+}
+.vs-select--item {
+    border: none !important;
+    outline: none !important;
+    padding-top: .55rem !important;
+    border-radius: 2px;
+}
+.input-select-con > input {
+    padding-top: .7rem;
+    padding-botton: .5rem;
+    display: inline-block;
+}
+.vuesax-table tr {
+    border-bottom: 1px solid #e3e3e3;
+}
+.vuesax-table th, .table td {
+    font-family: sans-ultra-light;
+    padding-top: .6rem !important;
+    padding-bottom: .4rem !important;
+}
+.vs-table--tbody-table {
+    min-width: auto !important;
+}
+.span-text-validation-danger > span {
+    color: rgb(242, 19, 93);
+}
+.span-text-validation-warning > span {
+    color: #ff9a12;
+}
+.span-text-validation-danger > span, .span-text-validation-warning > span, .span-text-validation-success > span, .span-text-validation > span {
+    font-size: 8pt;
+    margin-top: .5rem;
+}
+.list-en > vs-list--subtitle , .vs-pagination--ul span{
+    font-family: sans-serif !important;
+    font-size: 10pt;
+}
+.vs-pagination--ul *, .vs-pagination--buttons  {
+    transition: 0s all !important;
+}
+.active-expanded > i {
+    position: relative;
+    right: 13px;
+    top: 5px;
+}
+.vs-pagination--ul > .is-current > span {
+    color: white !important;
+}
+.vs-pagination--buttons {
+    position: relative;
+    top: -7px;
+}
+.sort-th > i {
+    position: relative;
+    top: -5px;
+    margin-right: 10px;
+}
+.con-input-search > i {
+    top: 6px;
+}
+.vs-con-table {
+    background: none !important;
+}
+    /*     ==================     Bootstrap 4 Customized      =================     */
 
 
 /*     ==================     navigation | component      =================     */
 nav {
-    max-height: 80px;
-    overflow: hidden;
-    padding-top: 1rem;
+    padding-top: .5rem
 }
-@media (max-width: 767.98px) {
-    nav {
-        max-height: 135px;
-    }
-}
-nav > .d-flex > div {
-    height: 50px;
-    padding: 0;
-}
-#logo > img{
+#logo > img {
     height: 50px;
     position: relative;
     top: -14px;
@@ -82,9 +222,11 @@ nav > .d-flex > div {
     cursor: pointer;
 }
 #drop-list-admin:hover *{
-    color: #456580;
+    color: #1f629f;
 }
 #drop-list-admin > * {
+    position: relative;
+    top: 8px;
     display: inline-block;
 }
 #drop-list-admin > img {
@@ -97,11 +239,105 @@ nav > .d-flex > div {
 }
 #drop-list-admin i {
     font-size: 10pt;
-    position: relative;
-    top: 2px;
 }
 
 
+/*====================================      menu.vue       =================================*/
+#menu {
+    height: 14rem;
+    background-color: #287fc7;
+}
+.bg-item-menu {
+    height: 4rem;
+    background-color: #287fc7;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*====================================      methodOneMenu.vue       =================================*/
+.main-menu-item {
+    cursor: pointer;
+    border-radius: 2px;
+}
+.main-menu-item > * {
+    color: white;;
+}
+.main-menu-item > p {
+    font-family: sans-normal;
+    font-size: 10pt;
+}
+.main-menu-item img {
+    height: 50px;
+}
+.main-menu-item img:hover {
+    filter: grayscale(0%);
+}
+.sub-menu-title > * {
+    display: inline-block;
+    font-size: 14pt;
+    font-family: sans-normal;
+    cursor: default;
+}
+.sub-menu-title > img {
+    height: 40px;
+    margin-left: 1rem;
+}
+.sub-menu-title + div > i {
+    position: relative;
+    top: 7px;
+    cursor: pointer;
+}
+.sub-menu-item {
+    padding: 10px 80px;
+}
+.sub-menu-item > ul {
+    height: 100%;
+    display: inline;
+}
+.sub-menu-item li {
+    padding-bottom: .3rem;
+    font-size: 10pt;
+    font-family: sans-ultra-light;
+}
+.sub-menu-item a {
+    color: white;
+}
+.sub-menu-item a:hover, .sub-menu-title + div > i:hover{
+    color: #dee5f5 !important;
+}
+.sub-menu-item ul {
+    width: auto;
+    border-right: 1px dashed rgba(255, 255, 255, 0.87);
+    display: inline-block;
+    margin: auto 18px;
+    padding-top: 5px;
+}
+.sub-menu-item li {
+    width: 10rem;
+}
+
+/*====================================      home.vue       =================================*/
+.avatar-in-home {
+    height: 10rem;
+    border-radius: 4px;
+}
+
+/*====================================      customers.vue       =================================*/
+.set--search-center header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.set--search-center {
+    padding: 0;
+    cursor: pointer;
+}
+
+/*====================================      order.vue       =================================*/
+.con-vs-avatar + .en-lang {
+    position: relative;
+    bottom: 3px;
+}
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { }
