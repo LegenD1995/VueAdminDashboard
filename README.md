@@ -1,4 +1,4 @@
-# alina-webview
+# Admin Panel - Customize Direct Admin Panel
 
 ## Project setup
 ```
